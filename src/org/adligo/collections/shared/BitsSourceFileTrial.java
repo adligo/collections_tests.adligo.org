@@ -64,8 +64,8 @@ public class BitsSourceFileTrial extends JjSourceFileTrial  {
       if (sb) {
         count++;
       }
-      println("byte " + b + " " + sb + " i " + i  + 
-          " " + toHex(b));
+//      println("byte " + b + " " + sb + " i " + i  + 
+//          " " + toHex(b));
     }
     return count;
   }
