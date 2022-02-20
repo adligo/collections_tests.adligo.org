@@ -1,5 +1,6 @@
 package org.adligo.collections.shared;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -48,21 +49,33 @@ public class BitsSourceFileTrial extends JjSourceFileTrial  {
     for (int i : bytesByCount.keySet()) {
       List<Byte> bs = bytesByCount.get(i);
       for (Byte b: bs) {
-        println("        case (byte) 0x" + String.format("%02X", b) + ": //no break");
+        println("        case (byte) 0x" + toHex(b) + ": //no break");
       }
       println("          return " + i + ";");
     }
+    countBits((byte) 0xBF);
   }
   
   public static int countBits(byte b) {
     int count = 0;
     for (int i = 0; i < 8; i++) {
       int set = b & (1 << i);
-      if (set != 0) {
+      boolean sb = set >= 1;
+      if (sb) {
         count++;
       }
+      println("byte " + b + " " + sb + " i " + i  + 
+          " " + toHex(b));
     }
     return count;
+  }
+  
+  public static String toHex(byte b) {
+    String s = Integer.toHexString(b);
+    if (s.length() >= 2) {
+      return s.substring(s.length() - 2, s.length());
+    }
+    return "0" + s;
   }
   
   @Test
@@ -72,4 +85,5 @@ public class BitsSourceFileTrial extends JjSourceFileTrial  {
       equals(count, Bits.countBits(i));
     }
   }
+  
 }
