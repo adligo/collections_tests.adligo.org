@@ -1,4 +1,4 @@
-package org.adligo.collections.shared;
+package org.adligo.collections.shared.common;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.adligo.i_ctx4jse.shared.I_PrintMixinStatic.*;
+
 import org.adligo.tests4j4jj.JjSourceFileTrial;
 import org.junit.jupiter.api.Test;
 

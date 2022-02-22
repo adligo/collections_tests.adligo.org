@@ -1,7 +1,8 @@
-package org.adligo.collections.shared;
+package org.adligo.collections.shared.indices.compression;
 
 import static org.adligo.i_ctx4jse.shared.I_PrintMixinStatic.println;
 
+import org.adligo.collections.shared.common.Numbered;
 import org.adligo.tests4j4jj.JjSourceFileTrial;
 import org.junit.jupiter.api.Test;
 

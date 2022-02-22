@@ -1,4 +1,4 @@
-package org.adligo.collections.shared;
+package org.adligo.collections.shared.common;
 
 import static org.adligo.i_ctx4jse.shared.I_PrintMixinStatic.println;
 
