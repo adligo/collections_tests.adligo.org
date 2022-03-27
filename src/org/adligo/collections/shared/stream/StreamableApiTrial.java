@@ -63,6 +63,12 @@ public class StreamableApiTrial extends JjApiTrial {
           public int size() {
             return items.length;
           }
+
+          @Override
+          public boolean isBig() {
+            // TODO Auto-generated method stub
+            return false;
+          }
           
         };
       }
@@ -96,6 +102,12 @@ public class StreamableApiTrial extends JjApiTrial {
           @Override
           public int size() {
             return 2;
+          }
+
+          @Override
+          public boolean isBig() {
+            // TODO Auto-generated method stub
+            return false;
           }
           
         };
